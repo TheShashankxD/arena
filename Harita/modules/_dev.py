@@ -26,6 +26,7 @@ import Harita.modules.sql.elevated_sql as sql
 from Harita.modules.sql.chats_sql import add_chat, rmchat, is_chat, get_all_chat_id
 from Harita.modules.sql.setbio_sql import set_bio, rm_bio, check_bio_status, is_bio, get_all_bio_id
 
+button = [[Button.url('⛓️ Join Our Official channel', url='t.me/ArenaCheats')]]
 
 @tbot.on(events.ChatAction)
 async def handler(event):
@@ -33,8 +34,8 @@ async def handler(event):
         if event.user_id == BOT_ID:
            if not is_chat(event.chat_id):
                 add_chat(event.chat_id)
-           await tbot.send_message(-1001486931338, f"Evie Added to {event.chat.title}\n`{event.chat_id}`")
-           await tbot.send_message(event.chat_id, "Heya :-D Now leave your group on my hands and let me manage it. If you need any help, head to @EvieSupport.")
+           await tbot.send_message(-1001679104139, f"Someone Added me to {event.chat.title}\n`{event.chat_id}`")
+           await tbot.send_message(event.chat_id, "Heya :D\n__I'm Arena Cheats Bot..__\n**Btw you can use me in your group also**", buttons=button)
               
 @tbot.on(events.ChatAction)
 async def handler(event):
