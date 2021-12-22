@@ -20,10 +20,10 @@ pagenumber = db.pagenumber
 
 
 
-about = "**About Me**\n\nMy name is Harita, A powerful group management bot who can take care of your groups with automated simple regular admin actions!\n\n**My Software Version:** 2.0.1\n**Telethon Version:** 1.21.1\n\n**My Developers:**\n• @Eviral\n• @Denzid\n• @wbavishek\n\nUpdates Channel: [Click Here](t.me/haritanews)\nSupport Chat: [Click Here](t.me/haritasupport)\n\nAnd finally thanks for Supporting me😘"
-ad_caption = "Hey! I am Harita, here to help you manage your groups! I perform most of the admin functions and make your group automated!\n\nJoin @HaritaNews for updates.\n@Haritasupport for help and support\n\nYou can checkout more about me via following buttons."
-pm_caption = "Hey there! My name is Harita - I'm a powerful group management bot Made to help you manage your groups easily!\n\nHit /help to find out more about me and unleash my full potential.\n\n"
-pmt = "Hello there! I'm Harita\nI'm a Telethon Based group management bot\n with a Much More features! Have a look\nat the following for an idea of some of \nthe things I can help you with.\n\nMain commands available:\n/start : Starts me, can be used to check i'm alive or not.\n/help : PM's you this message.\nExplore My Commands🙃."
+about = "**About Me**\n\nHello there! I'm Arena Cheats Assistant\nAlso i can manage your group..\n\nUse below buttons to know more about me"
+ad_caption = "Hello there! I'm Arena Cheats Assistant\nAlso i can manage your group..\n\nUse below buttons to know more about me"
+pm_caption = "Hello there! I'm Arena Cheats Assistant\nAlso i can manage your group..\n\nUse below buttons to know more about me\n\n"
+pmt = "Hello there! I'm Arena Cheats Assistant\nAlso i can manage your group..\n\nUse below buttons to know more about me"
 @register(pattern="^/start$")
 async def start(event):
 
@@ -33,18 +33,20 @@ async def start(event):
             pm_caption,
             buttons=[
                 [
-                    Button.inline("Tutorial", data="soon"),
+                    Button.url("⛓️ Official Channel", url="t.me/ArenaCheats"),
+                ],
+                  [
                     Button.inline("Commands", data="help_menu"),
                 ],
                   [
                     Button.url(
-                        "Add Me To Your Group!", "t.me/haritarobot?startgroup=true"
+                        "Add Me To Your Group!", "t.me/ArenaCheats_Bot?startgroup=true"
                     ),
                 ],
             ],
         )
     else:
-        await event.reply("Heya Harita is here!,\nHow Can I Help Ya.")
+        await event.reply("Heya Arena is here!,\nHow Can I Help Ya.")
 
 @tbot.on(events.CallbackQuery(pattern=r"reopen_again"))
 async def reopen_again(event):
@@ -53,12 +55,14 @@ async def reopen_again(event):
             pm_caption,
             buttons=[
                 [
-                    Button.inline("Tutorial", data="soon"),
+                    Button.url("⛓️ Official Channel", url="t.me/ArenaCheats"),
+                ],
+                  [
                     Button.inline("Commands", data="help_menu"),
                 ],
                   [
                     Button.url(
-                        "Add Me To Your Group!", "t.me/haritarobot?startgroup=true"
+                        "Add Me To Your Group!", "t.me/ArenaCheats_Bot?startgroup=true"
                     ),
                 ],
             ],
@@ -75,7 +79,7 @@ async def help(event):
     else:
         await event.reply(
             "Contact me in PM for help!",
-            buttons=[[Button.url("Click me for help!", "t.me/haritarobot?start=help")]],
+            buttons=[[Button.url("Click me for help!", "t.me/ArenaCheats_Bot?start=help")]],
         )
 
 @tbot.on(events.CallbackQuery(pattern=r"help_menu"))
@@ -171,9 +175,6 @@ def paginate_help(event, page_number, loaded_plugins, prefix):
                 custom.Button.inline(
                     "Go Back 🔙", data="reopen_again"
                ),
-                custom.Button.url(
-                    "Source", "https://github.com/Teameviral/HaritaRobot"
-                ),
                 
                 
           )
